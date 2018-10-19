@@ -12,11 +12,11 @@ _by Wilson_
 * the service for project that uses Git
 * *we need Git to use Github*
 
-
 ---
 ## Initial Setup
-
-
+#### **Create a Github account**
+1. First go into the home Github website [(click here for the link)](https://www.github.com)
+2. Then click sign up near the top right
 
 ---
 ## Repository Setup
@@ -25,7 +25,10 @@ _by Wilson_
 
 ---
 ## Workflow & Commands
-
+#### The number *1* most important command is:
+git status
+* the best tool to solve any (*most*) problems
+* 
 
 
 ---
