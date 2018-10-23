@@ -74,3 +74,35 @@ When you are sign in you should see your profile picture on the top right
 
 ---
 ## Rolling Back Changes
+* You can use `git status` to see what you can do to undo something you have done(only works for edits and add)
+
+#### Undo Edits
+The command to use: `git checkout -- <filename>`
+* This is to discard changes in the file that you have not commited yet. 
+
+#### Undo Add
+The command to use: `git reset HEAD <filename>`
+* This unstages the file change and is ready for any changes that are going to be made(After you are done do `git add` again so you can save your changes)
+
+#### Undo Commits
+There are three ways: 
+* `git reset --hard HEAD~1`
+* `git reset HEAD~1`
+* `git reset --soft HEAD~1`
+
+`git reset --hard HEAD~1`
+* To completely delete the commit and never see it again which can be dangerous
+* If you have done this and want it back, there is a way to save your file
+    * do git reflog to see a list of commit SHAs
+    * `git checkout -b newBranchName shaCommitYouDestroyed`
+    * Commits would usually stay for 90 days so you can save your commits that you don't meant to completely destroy
+
+`git reset HEAD~1`
+* To undo the current commit and undo the add
+* This allows you to go back to the previous commit but keeps your changes
+* You have to do `git add` and `git commit` again
+
+`git rest --soft HEAD~1`
+* To only undo the current commit
+* This allows you to go back to where you just did the most recent `git add`
+* You can do `git commit` and you will be jsut doing the same commit that you just had
