@@ -106,3 +106,11 @@ There are three ways:
 * To only undo the current commit
 * This allows you to go back to where you just did the most recent `git add`
 * You can do `git commit` and you will be jsut doing the same commit that you just had
+ 
+#### Undo Push
+The command to use: `git reset --hard <SHA code>`
+* This completely changes the commit history and delete the commit even from the remote
+* This is not recommend, especially when you are collaborating with others
+
+
+
