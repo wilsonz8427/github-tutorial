@@ -1,7 +1,8 @@
 # GitHub Tutorial
 
-_by Wilson Zhang_
+_by Wilson Zhang_  
 
+##### Note: This tutorial is mainly for people who uses Cloud 9 IDE 
 ---
 ## Git vs. GitHub
 **Git:** a version control that help keep "snapshots" of code
@@ -22,12 +23,20 @@ Git is only a tool for the users to use when programming while github is a cloud
 
 ---
 ## Repository Setup
+#### On the Cloud 9
 **Please refer to *Workflow & Commands* if you need the definitions and usage of a command**  
 When you first create a directory there are important steps to take before you can save your code:  
 1. You should always cd(move) into the directory
 2. Use `git init` to allow git to start saving your changes
 3. After you have made some changes to a file you can do `git add`
 4. Finally, right after `git add` you can do `git commit -m ""` to save you changes
+
+#### New Repository on Github
+When you are sign in you should see your profile picture on the top right
+1. Click the profile picture and click "your repository"
+2. Next click the Green Button on the right side that says "NEW" 
+3. Type in a name for your repository. Name your repository the same as you have name your directory in your IDE(or local)
+4. You may leave the other settings alone. if you wish you may change it
 
 ---
 ## Workflow & Commands
