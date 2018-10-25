@@ -19,7 +19,7 @@ Git is only a tool for the users to use when programming while github is a cloud
 ---
 ## Initial Setup
 #### **Create a Github account**
-![github signup](pictures/github-username.jpg)
+![github signup](/github-tutorial/pictures/github-username.png)
 1. First go into the home Github website [(click here for the link)](https://www.github.com)
 2. Then click sign up near the top right
 3. Then please enter a username that you will use (use your hstat email but without @hstat.org)
@@ -27,6 +27,7 @@ Git is only a tool for the users to use when programming while github is a cloud
 5. Make sure to verify account and then click "Create an account"
 6. Then choose your plan (students please choose FREE) and click "Continue"
     * The Checkboxes is optional
+![github personalplan](/github-tutorial/pictures/github-personalplan.png)
 7. Next answer the questions and press Submit
 8. When it is loaded it is COMPLETED!
 
@@ -130,5 +131,16 @@ The command to use: `git reset --hard <SHA code>`
 
 
 ## Error-Handling
-<!--WheRe iS tHe SSH keY?-->
+There are time where mistakes can happen by accident. These are some of the mistakes and how to handle them.
+
+#### git init in the wrong place
+Let just say that you accidently git init in your workspace(which you should **NOT** do) and you want to fix that. 
+How can you tell that you git init you directory? (2 ways)
+1. If you do `ls -a` and you see a folder called: .git then your directory is initilized
+2. If you see (master) next to your file path 
+![git master ](/github-tutorial/pictures/git(master).png)
+git init creates a file called .git(it is hidden) so to uninitalize it you do:
+1. Go to where you accidently git init your directory
+2. Delete it by doing `rm -rf .git`
+
 
