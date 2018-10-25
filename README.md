@@ -137,9 +137,9 @@ There are time where mistakes can happen by accident. These are some of the mist
 Let just say that you accidently git init in your workspace(which you should **NOT** do) and you want to fix that. 
 How can you tell that you git init you directory? (2 ways)
 1. If you do `ls -a` and you see a folder called: .git then your directory is initilized
-2. If you see (master) next to your file path 
-![git master](pictures/git(master).png)
-git init creates a file called .git(it is hidden) so to uninitalize it you do:
+2. If you see (master) next to your file path git init creates a file called .git(it is hidden)  
+![git master](pictures/git(master).png)  
+To uninitalize your repository you do:
 1. Go to where you accidently git init your directory
 2. Delete it by doing `rm -rf .git`
 
@@ -153,4 +153,26 @@ If you want to completely remove a repository on Github you would have to:
 
 ## Collaboration
 #### Fork & Clone
-There are times when you want to change a project that is from another person, to do this you must fork and then clone it into your local to change it.
+There are times when you want to change a project that is from another person, to do this you must fork and then clone it into your local to change it.  
+**How to fork:**
+1. Go to Github and go onto the project that you want to make changes to
+2. Click the "fork" button on the top on the right side of the title  
+![github_fork](pictures/github_fork.png)
+3. Wait until Github is done forking the project when it is loaded you should see your username near with the project name that your forked
+
+**How to clone**
+When you finish the fork of the project you must clone it into your Cloud 9 to make any changes
+1. Find the green "Clone or download" button near the right side and click on it
+2. AFter you click on it you should see "Clone with_____"
+    1. If it says HTTPS click on "Use SSH" to the right
+    2. If it says SSH. You can leave it
+3. Click on the clipboard next to the SSH to copy it (it should look something like this: (git@github.com:username123/nameofproject.git)
+4. Go back to cloud 9 and type in your terminal `git clone` and paste in the SSH and then press ENTER
+5. Now you should see a new repository that have the name of the project.
+
+
+
+
+
+
+
