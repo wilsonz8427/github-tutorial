@@ -19,6 +19,7 @@ Git is only a tool for the users to use when programming while github is a cloud
 ---
 ## Initial Setup
 #### **Create a Github account**
+![github signup](pictures/github-username.jpg)
 1. First go into the home Github website [(click here for the link)](https://www.github.com)
 2. Then click sign up near the top right
 3. Then please enter a username that you will use (use your hstat email but without @hstat.org)
@@ -28,6 +29,21 @@ Git is only a tool for the users to use when programming while github is a cloud
     * The Checkboxes is optional
 7. Next answer the questions and press Submit
 8. When it is loaded it is COMPLETED!
+
+#### How to link Cloud 9 and Github with SSH Key
+1. Go to the Cloud 9 dashboard and click the gear icon on the top right
+2. Then click on the "SSH Keys" on the left side
+3. You should see two big block of text(if not please scroll down). Copy the **SECOND** block of text
+4. Open [github.com](github.com)
+5. Click on your profile picture, on the top right, and click "settings"
+6. Click on thee "SSH and GPG keys" on the left side.
+7. Then click on "New SSH Key"
+8. Write a title for the SSH key(i.e. cloud9)
+9. Then under the "key" paste in the key that you copy from cloud 9
+10. Click on "Add SSH key"
+11. Now go back to cloud 9 dashboard and open your workspace
+12. In the terminal type in: `ssh -T git@github.com`. If everything went well, then it should tell you "Hi (your username)! You've successfully authenticated, but GitHub does not provide shell access."
+
 ---
 ## Repository Setup
 #### On the Cloud 9
@@ -112,5 +128,7 @@ The command to use: `git reset --hard <SHA code>`
 * This completely changes the commit history and delete the commit even from the remote
 * This is not recommend, especially when you are collaborating with others
 
+
+## Error-Handling
 <!--WheRe iS tHe SSH keY?-->
 
