@@ -175,7 +175,8 @@ There are times when you want to change a project that is from another person, t
 3. Wait until Github is done forking the project when it is loaded you should see your username near with the project name that your forked
 
 **How to clone**
-When you finish the fork of the project you must clone it into your Cloud 9 to make any changes
+When github is done forking the project you must clone it into your Cloud 9 to make any changes. Make sure that your username is next to the name of the project.
+
 1. Find the green "Clone or download" button near the right side and click on it
 2. AFter you click on it you should see "Clone with_____"
     1. If it says HTTPS click on "Use SSH" to the right
@@ -193,5 +194,6 @@ When you finish the fork of the project you must clone it into your Cloud 9 to m
 1. Go to your repository that you have forked
 2. Click on the "New pull requests" button
 3. Click on the green button that says "Create pull request"
+4. Next, leave a comment if you want and click on green "Create pull request" button
 
-Now wait until the owners checks your changnes and either approve or denied it
+Now wait until the owners checks your changes and either approve or denied it
