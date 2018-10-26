@@ -48,20 +48,24 @@ Git is only a tool for the users to use when programming while github is a cloud
 ---
 ## Repository Setup
 #### On the Cloud 9
-**Please refer to *Workflow & Commands* if you need the definitions and usage of a command**  
+**Please refer to *Workflow & Commands* if you need the definitions and usage of some of the command**  
 
+Use `mkdir (filename)` to create a directory
 When you first create a directory there are important steps to take before you can save your code:  
 1. You should always cd (move) into the directory
 2. Use `git init` to allow git to start saving your changes
 3. After you have made some changes to a file you can do `git add`
+    * You can create a file by using the command `touch (filename)` 
 4. Finally, right after `git add` you can do `git commit -m ""` to save you changes
+5. Every once in a while, you should have to do `git push`(You have to do `git push -u origin master` first) to push your changes to github
 
 #### New Repository on Github
 When you are sign in you should see your profile picture on the top right
 1. Click the profile picture and click "your repository"
 2. Next click the Green Button on the right side that says "NEW" 
-3. Type in a name for your repository. Name your repository the same as you have name your directory in your IDE(or local)
-4. You may leave the other settings alone. If you wish, you may change it
+3. Type in a name for your repository. Name your repository the **SAME** as you have name your directory in your IDE(or local)
+4. You may leave the other settings alone. If you wish, you may change it.
+5. On the top, you may see the setting to switch between HTTPS and SSH. Please switch to SSH if you are in HTTPS.
 
 ---
 ## Workflow & Commands
@@ -73,14 +77,22 @@ When you are sign in you should see your profile picture on the top right
 `git init`
 * To **initilize** the directory and set up the tool for git
 
-`git add`
+`git add (filename)`
 * It is a command to add a file to the "staging area" which lets the computer know your change
 * Gets the files ready for a commit(save)
+* You may use `git add .` to add the new and modified files but not the deleted one(and also the renamed ones)
+* You may also use `git add --all` to add all the files
 
-`git commit -m ""`
+`git commit -m " "`
 * A command to save your changes 
-* `-m ""` allows you to add your own message to your commit(save) you put your message in between ""
+* `-m " "` allows you to add your own message to your commit(save) you put your message in between ""
 * *It needs your file to be add to the "staging area"*
+
+`git remote add origin URL`: Creates the "bridge" that connects the local repository on Cloud 9 to the remote repository on Github
+* remote - Sets up the connection between the local repository and the remote repository.
+* add -** Adds the remote repository.
+* origin - The nickname for the remote repository.
+* URL - The URL(address) to the remote repository. It should be in SSH(but it could also be HTTPS)
 
 `git push -u origin master`
 * `git push` - is to send your commits to github
@@ -125,7 +137,9 @@ There are three ways:
 * You can do `git commit` and you will be jsut doing the same commit that you just had
  
 #### Undo Push
-The command to use: `git reset --hard <SHA code>`
+The command to use: `git revert <SHA code>`
+* It doesn't have to be the latest commit, as long as you use the correct SHA code it should revert to that commit
+* Reverting the commit is just creating a new commit that undos and replaces all the "bad" commits
 * This completely changes the commit history and delete the commit even from the remote
 * This is not recommend, especially when you are collaborating with others
 
@@ -170,9 +184,14 @@ When you finish the fork of the project you must clone it into your Cloud 9 to m
 4. Go back to cloud 9 and type in your terminal `git clone` and paste in the SSH and then press ENTER
 5. Now you should see a new repository that have the name of the project.
 
+#### Pull and Pull Requests
+`git pull` - takes all the change that is made on the remote repository on github to your local repository on Cloud 9
 
+**Pull Requests** - You may want to give your changes of someone else's project to them which can be done by doing a pull request. However, the owner of the project can either accept or denied your changes. If accepted your changes will be put into the new repository but if you are denied then nothing on the repostiory would change.
 
+**How to create a pull request**
+1. Go to your repository that you have forked
+2. Click on the "New pull requests" button
+3. Click on the green button that says "Create pull request"
 
-
-
-
+Now wait until the owners checks your changnes and either approve or denied it
